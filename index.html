@@ -1,0 +1,24 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    var data = [{"name":"Яблоко «Слава победителям»"},{"name":"Яблоко «Пинк леди»"},{"name":"Яблоко «Гала»"},{"name":"Яблоко «Квинти»"},{"name":"Яблоко «Женева»"},{"name":"Яблоко «Ред делишес»"},{"name":"Яблоко «Золотой ахмед»"},{"name":"Яблоко «Малинка»"},{"name":"Яблоко «Спартан»"},{"name":"Яблоко «Богатырь»"},{"name":"Яблоко «Бребурн»"},{"name":"Яблоко «Гренни смит»"},{"name":"Яблоко «Голден»"},{"name":"Яблоко «Крипс пинк»"},{"name":"Яблоко «Красные крымские»"},{"name":"Яблоко «Дискавери»"},{"name":"Яблоко «Орловское полосатое»"},{"name":"Яблоко «Дарья»"},{"name":"Яблоко «Ред чиф»"},{"name":"Яблоко «Фуджи»"},{"name":"Яблоко «Глостер»"},{"name":"Яблоко «Черный принц»"},{"name":"Яблоко «Ренет Симиренко»"},{"name":"Яблоко «Айдаред»"},{"name":"Яблоко «Синап кандиль»"},{"name":"Яблоко «Шафран»"}];
+$(document).ready(function () {
+    var html = '<table class="table table-striped">';
+    html += '<tr>';
+    var flag = 0;
+    $.each(data[0], function(index, value){
+        html += '<th>'+index+'</th>';
+    });
+    html += '</tr>';
+     $.each(data, function(index, value){
+         html += '<tr>';
+        $.each(value, function(index2, value2){
+            html += '<td>'+value2+'</td>';
+        });
+        html += '<tr>';
+     });
+     html += '</table>';
+     $('body').html(html);
+});
+</script>
